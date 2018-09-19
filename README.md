@@ -1,4 +1,4 @@
-# GAAL-based-outlier-detection
+# Generative Adversarial Active Learning for Unsupervised Outlier Detection
 Two GAAL-based outlier detection models: Single-Objective Generative Adversarial Active Learning (SO-GAAL) and Multiple-Objective Generative Adversarial Active Learning (MO-GAAL).
 
 ## Environment
