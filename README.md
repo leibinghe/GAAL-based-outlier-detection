@@ -57,5 +57,5 @@ synthetic dataset: onecluster
 
 real-word datasets: Annthyroid, SpamBase, Waveform and WDBC
 
-Update: December 5, 2018
+Update: December 5,  2018
 
