@@ -17,7 +17,7 @@ If you use the codes, please cite our paper . Thanks!
 - Keras (version: 2.0.2)
 
 ## Quick Start
-![figure](./figure.pdf)
+![figure](./figure.png)
 
 ### Example to run the codes.
 The instruction of commands has been clearly stated in the codes (see the parse_args function).
