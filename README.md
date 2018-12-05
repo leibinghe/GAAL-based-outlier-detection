@@ -28,6 +28,7 @@ python SO-GAAL.py --path Data/onecluster --stop_epochs 1000 --lr_d 0.01 --lr_g 0
 ```
 or `./SO-GAAL.sh`  for short.
 
+
 To launch the MO-GAAL quickly, you can use:
 ```
 python MO-GAAL.py --path Data/onecluster --k 10 --stop_epochs 1500 --lr_d 0.01 --lr_g 0.0001 --decay 1e-6 --momentum 0.9
