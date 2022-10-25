@@ -1,0 +1,58 @@
+DATA: onecluster
+python SO-GAAL.py --path Data/onecluster --stop_epochs 1000 --whether_stop 1 --lr_d 0.01 --lr_g 0.0001 --decay 1e-6 --momentum 0.9
+python MO-GAAL.py --path Data/onecluster --k 10 --stop_epochs 1500 --whether_stop 1 --lr_d 0.01 --lr_g 0.0001 --decay 1e-6 --momentum 0.9
+
+
+DATA: Annthyroid
+python SO-GAAL.py --path Data/Annthyroid --stop_epochs 22 --whether_stop 1 --lr_d 0.01 --lr_g 0.0001 --decay 1e-6 --momentum 0.9
+python MO-GAAL.py --path Data/Annthyroid --k 10 --stop_epochs 22 --whether_stop 1 --lr_d 0.01 --lr_g 0.0001 --decay 1e-6 --momentum 0.9
+
+
+DATA: Arrhythmia
+python SO-GAAL.py --path Data/Arrhythmia --stop_epochs 70 --whether_stop 1 --lr_d 0.01 --lr_g 0.0001 --decay 1e-6 --momentum 0.9
+python MO-GAAL.py --path Data/Arrhythmia --k 10 --stop_epochs 70 --whether_stop 1 --lr_d 0.01 --lr_g 0.0001 --decay 1e-6 --momentum 0.9
+
+
+DATA: Ionosphere
+python SO-GAAL.py --path Data/Ionosphere --stop_epochs 100 --whether_stop 1 --lr_d 0.01 --lr_g 0.0001 --decay 1e-6 --momentum 0.9
+python MO-GAAL.py --path Data/Ionosphere --k 10 --stop_epochs 300 --whether_stop 1 --lr_d 0.01 --lr_g 0.0001 --decay 1e-6 --momentum 0.9
+
+
+DATA: PageBlocks
+python SO-GAAL.py --path Data/PageBlocks --stop_epochs 28 --whether_stop 1 --lr_d 0.01 --lr_g 0.0001 --decay 1e-6 --momentum 0.9
+python MO-GAAL.py --path Data/PageBlocks --k 10 --stop_epochs 40 --whether_stop 1 --lr_d 0.01 --lr_g 0.0001 --decay 1e-6 --momentum 0.9
+
+
+DATA: PenDigits
+python SO-GAAL.py --path Data/PenDigits --stop_epochs 6 --whether_stop 1 --lr_d 0.01 --lr_g 0.0001 --decay 1e-6 --momentum 0.9
+python MO-GAAL.py --path Data/PenDigits --k 10 --stop_epochs 9 --whether_stop 1 --lr_d 0.01 --lr_g 0.0001 --decay 1e-6 --momentum 0.9
+
+
+DATA: Pima
+python SO-GAAL.py --path Data/Pima --stop_epochs 200 --whether_stop 1 --lr_d 0.01 --lr_g 0.0001 --decay 1e-6 --momentum 0.9
+python MO-GAAL.py --path Data/Pima --k 10 --stop_epochs 250 --whether_stop 1 --lr_d 0.01 --lr_g 0.0001 --decay 1e-6 --momentum 0.9
+
+
+DATA: Shuttle
+python SO-GAAL.py --path Data/Shuttle --stop_epochs 90 --whether_stop 1 --lr_d 0.01 --lr_g 0.0001 --decay 1e-6 --momentum 0.9
+python MO-GAAL.py --path Data/Shuttle --k 10 --stop_epochs 120 --whether_stop 1 --lr_d 0.01 --lr_g 0.0001 --decay 1e-6 --momentum 0.9
+
+
+DATA: SpamBase
+python SO-GAAL.py --path Data/SpamBase --stop_epochs 40 --whether_stop 1 --lr_d 0.01 --lr_g 0.0001 --decay 1e-6 --momentum 0.9
+python MO-GAAL.py --path Data/SpamBase --k 10 --stop_epochs 40 --whether_stop 1 --lr_d 0.01 --lr_g 0.0001 --decay 1e-6 --momentum 0.9
+
+
+DATA: Stamps
+python SO-GAAL.py --path Data/Stamps --stop_epochs 200 --whether_stop 1 --lr_d 0.01 --lr_g 0.0001 --decay 1e-6 --momentum 0.9
+python MO-GAAL.py --path Data/Stamps --k 10 --stop_epochs 200 --whether_stop 1 --lr_d 0.01 --lr_g 0.0001 --decay 1e-6 --momentum 0.9
+
+
+DATA: Waveform
+python SO-GAAL.py --path Data/Waveform --stop_epochs 10 --whether_stop 1 --lr_d 0.01 --lr_g 0.0001 --decay 1e-6 --momentum 0.9
+python MO-GAAL.py --path Data/Waveform --k 10 --stop_epochs 30 --whether_stop 1 --lr_d 0.01 --lr_g 0.0001 --decay 1e-6 --momentum 0.9
+
+
+DATA: WDBC
+python SO-GAAL.py --path Data/WDBC --stop_epochs 200 --whether_stop 1 --lr_d 0.01 --lr_g 0.0001 --decay 1e-6 --momentum 0.9
+python MO-GAAL.py --path Data/WDBC --k 10 --stop_epochs 200 --whether_stop 1 --lr_d 0.01 --lr_g 0.0001 --decay 1e-6 --momentum 0.9
