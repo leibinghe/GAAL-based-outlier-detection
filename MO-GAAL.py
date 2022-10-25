@@ -1,9 +1,11 @@
 from keras.layers import Input, Dense
 from keras.models import Sequential, Model
-from keras.optimizers import SGD
+from tensorflow.keras.optimizers import SGD
 import numpy as np
 import pandas as pd
 from collections import defaultdict
+import matplotlib as mpl
+mpl.use('TkAgg')
 import matplotlib.pyplot as plt
 import keras
 import math
@@ -11,12 +13,14 @@ import argparse
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Run MO-GAAL.")
-    parser.add_argument('--path', nargs='?', default='Data/Annthyroid',
+    parser.add_argument('--path', nargs='?', default='Data/WDBC',
                         help='Input data path.')
     parser.add_argument('--k', type=int, default=10,
                         help='Number of sub_generator.')
-    parser.add_argument('--stop_epochs', type=int, default=25,
+    parser.add_argument('--stop_epochs', type=int, default=300,
                         help='Stop training generator after stop_epochs.')
+    parser.add_argument('--whether_stop', type=int, default=1,
+                        help='Whether or not to stop training generator after stop_epochs.')
     parser.add_argument('--lr_d', type=float, default=0.01,
                         help='Learning rate of discriminator.')
     parser.add_argument('--lr_g', type=float, default=0.0001,
@@ -51,7 +55,7 @@ def load_data():
     data = data.sample(frac=1).reset_index(drop=True)
     id = data.pop(0)
     y = data.pop(1)
-    data_x = data.as_matrix()
+    data_x = data.values
     data_id = id.values
     data_y = y.values
     return data_x, data_y, data_id
@@ -171,8 +175,8 @@ if __name__ == '__main__':
                 train_history['generator_loss'].append(generator_loss)
 
                 # Stop training generator
-                if epoch +1  > args.stop_epochs:
-                    stop = 1
+                if epoch +1 > args.stop_epochs:
+                    stop = args.whether_stop
 
             # Detection result
             data_y = pd.DataFrame(data_y)
@@ -193,8 +197,8 @@ if __name__ == '__main__':
                     else:
                         sum += 0
             AUC = '{:.4f}'.format(sum / (len(inlier_parray) * len(outlier_parray)))
-            print('AUC:{}'.format(AUC))
             for i in range(num_batches):
-                train_history['auc'].append(AUC)
+                train_history['auc'].append((sum / (len(inlier_parray) * len(outlier_parray))))
+            print('AUC:{}'.format(AUC))
 
     plot(train_history, 'loss')
